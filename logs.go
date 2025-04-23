@@ -68,15 +68,15 @@ func Log(options *LogOptions) {
 	case InfoLevel:
 		color.New(color.FgWhite, color.BgCyan).Print("INFO")
 		color.New(color.FgCyan).Print(options.Service)
-		color.New(color.FgGray.Light()).Print(options.Service)
+		color.New(color.FgGray.Light()).Print(options.Message)
 	case ErrorLevel:
 		color.New(color.FgWhite, color.BgRed).Print("ERROR")
 		color.New(color.FgRed).Print(options.Service)
-		color.New(color.FgGray.Light()).Print(options.Service)
+		color.New(color.FgGray.Light()).Print(options.Message)
 	case DebugLevel:
 		color.New(color.FgWhite, color.BgBlue).Print("DEBUG")
 		color.New(color.FgBlue).Print(options.Service)
-		color.New(color.FgGray.Light()).Print(options.Service)
+		color.New(color.FgGray.Light()).Print(options.Message)
 	}
 	fmt.Println("")
 }

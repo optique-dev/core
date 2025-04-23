@@ -1,6 +1,7 @@
 package core
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/gookit/color"
@@ -77,4 +78,5 @@ func Log(options *LogOptions) {
 		color.New(color.FgBlue).Print(options.Service)
 		color.New(color.FgGray.Light()).Print(options.Service)
 	}
+	fmt.Println("")
 }

@@ -28,5 +28,5 @@ jobs:
               sha: context.sha
             })
           env:
-            NEXT_VERSION: ${{ steps.semver.outputs.next-version }}
+            NEXT_VERSION: ${{ steps.semver.outputs.next }}
 

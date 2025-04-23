@@ -19,6 +19,8 @@ jobs:
           branch: main
       - name: Create tag
         uses: actions/github-script@v6
+        env:
+          NEXT_VERSION: ${{ steps.semver.outputs.next }}
         with:
           script: |
             github.rest.git.createRef({
@@ -27,6 +29,4 @@ jobs:
               ref: `refs/tags/${process.env.NEXT_VERSION}`,
               sha: context.sha
             })
-          env:
-            NEXT_VERSION: ${{ steps.semver.outputs.next }}
 

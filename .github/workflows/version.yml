@@ -20,7 +20,6 @@ jobs:
       - name: Create release
         uses: ncipollo/release-action@v1.12.0
         with:
-          tag: ${{ steps.semver.outputs.version }}
           name: ${{ steps.semver.outputs.version }}
           body: Changelog content
           token: ${{ github.token }}

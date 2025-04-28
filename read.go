@@ -6,11 +6,11 @@ import (
 )
 
 type OptiqueModuleManifest struct {
-	Name    string   `json:"name"`
-	Type    string   `json:"type"`
-	URL     string   `json:"url"`
-	Ignore  []string `json:"ignore"`
-	Scripts []string `json:"scripts"`
+	Name    string              `json:"name"`
+	Type    string              `json:"type"`
+	URL     string              `json:"url"`
+	Ignore  []string            `json:"ignore"`
+	Scripts []map[string]string `json:"scripts"`
 }
 
 func ReadManifest() (*OptiqueModuleManifest, error) {

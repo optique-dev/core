@@ -6,10 +6,11 @@ import (
 )
 
 type OptiqueModuleManifest struct {
-	Name   string   `json:"name"`
-	Type   string   `json:"type"`
-	URL    string   `json:"url"`
-	Ignore []string `json:"ignore"`
+	Name    string   `json:"name"`
+	Type    string   `json:"type"`
+	URL     string   `json:"url"`
+	Ignore  []string `json:"ignore"`
+	Scripts []string `json:"scripts"`
 }
 
 func ReadManifest() (*OptiqueModuleManifest, error) {
@@ -26,11 +27,11 @@ func ReadManifest() (*OptiqueModuleManifest, error) {
 }
 
 type OptiqueProjectManifest struct {
-	Name string `json:"name"` //optique name
-	Module string `json:"module"` // golang module name
+	Name         string   `json:"name"`   //optique name
+	Module       string   `json:"module"` // golang module name
 	Repositories []string `json:"repositories"`
 	Applications []string `json:"applications"`
-	Ignore []string `json:"ignore"`
+	Ignore       []string `json:"ignore"`
 }
 
 func ReadProjectManifest() (*OptiqueProjectManifest, error) {

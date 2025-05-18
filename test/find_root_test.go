@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/optique-dev/core"
+	"github.com/optique-dev/optique"
 )
 
 func TestFindRootAtSameLevel(t *testing.T) {
@@ -27,7 +27,7 @@ func TestFindRootAtSameLevel(t *testing.T) {
 	}
 	builder.GoTo("")
 	defer builder.Clean()
-	root, err := core.FindOptiqueJson()
+	root, err := optique.FindOptiqueJson()
 	if err != nil {
 		builder.Clean()
 		t.Fatal(err)
@@ -56,7 +56,7 @@ func TestFindRootAtParentLevel(t *testing.T) {
 	}
 	builder.GoTo("app/domain")
 	defer builder.Clean()
-	root, err := core.FindOptiqueJson()
+	root, err := optique.FindOptiqueJson()
 	if err != nil {
 		builder.Clean()
 		t.Fatal(err)
